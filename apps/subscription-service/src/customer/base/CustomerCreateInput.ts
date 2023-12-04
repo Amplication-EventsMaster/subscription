@@ -72,6 +72,17 @@ class CustomerCreateInput {
     nullable: true,
   })
   phone?: string | null;
+
+  @ApiProperty({
+    required: false,
+    type: String,
+  })
+  @IsString()
+  @IsOptional()
+  @Field(() => String, {
+    nullable: true,
+  })
+  phone_2?: string | null;
 }
 
 export { CustomerCreateInput as CustomerCreateInput };
